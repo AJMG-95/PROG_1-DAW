@@ -1,0 +1,5 @@
+5. Escribir un programa que solicite números al usuario y los vaya
+introduciendo en un array con una longitud inicial de 5. Si se supera
+la capacidad del array, se deberá ampliar usando la solución del
+ejercicio anterior. Cuando el usuario introduzca un 0, deberá mostrar
+todos los elementos almacenados en el array y finalizar el programa

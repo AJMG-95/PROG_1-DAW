@@ -1,0 +1,12 @@
+Es una estructura FIFO
+
+El primero que llega es el primero en salir y los elementos se añaden por detrás.
+    Y se quitan por delante.
+
+Metodos: (c == this)
+    constructor(): c
+    esVacia(c): boolean
+    meter(c, e): void
+    sacar(c): e
+    primero(c): e
+    ultimo(c): e

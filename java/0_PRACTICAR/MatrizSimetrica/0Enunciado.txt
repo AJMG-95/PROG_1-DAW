@@ -1,0 +1,23 @@
+Programar en Java una clase llamada Cuadrado con un método estático llamado cuadrado que reciba un número entero n>0 y que devuelva una matriz cuadrada de n×n elementos enteros (es decir, un array de filas donde cada fila sea un array de enteros), y donde cada fila contenga los números del 1 al n
+
+en orden creciente pero rotados una vez en cada fila sucesiva (es decir, el primer elemento de la siguiente fila será el último de la fila anterior).
+
+Por ejemplo, una llamada a Cuadrado.cuadrado(5) devolvería la matriz:
+
+⎡⎣⎢⎢⎢⎢⎢⎢1543221543321544321554321⎤⎦⎥⎥⎥⎥⎥⎥
+
+
+Indicación: Se puede usar el método System.arraycopy para copiar una fila sobre otra.
+
+Por ejemplo:
+Test 	Resultado
+
+System.out.println(Arrays.deepEquals(Cuadrado.cuadrado(1), new int[][] { {1} }));
+true
+
+System.out.println(Arrays.deepEquals(Cuadrado.cuadrado(2), new int[][] { {1, 2}, {2, 1} }));
+true
+
+System.out.println(Arrays.deepEquals(Cuadrado.cuadrado(3), new int[][] { {1, 2, 3}, {3, 1, 2}, {2, 3, 1} }));
+
+true

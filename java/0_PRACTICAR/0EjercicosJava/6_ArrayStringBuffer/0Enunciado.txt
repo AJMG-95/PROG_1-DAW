@@ -1,0 +1,4 @@
+6. Escribir un programa que cree un array de 5 elementos de tipo StringBuffer,
+luego lo copie creando un nuevo array usando Arrays.copyOf, modifique una de las
+cadenas almacenadas a través del primer array y finalmente compruebe si se ha
+modificado en el nuevo array. ¿Qué conclusión podemos sacar?

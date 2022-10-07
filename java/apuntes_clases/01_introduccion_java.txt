@@ -1,0 +1,44 @@
+java -cp /usr/lib/java:/usr/java:/tmp Principal, el '-cp' sirva para indicar el class path
+
+Crear y exportar la variable de entorno CLASSPATH del sistema operativo:
+
+export CLASSPATH=/usr/lib/java:/usr/java:/tmp
+java Principal
+
+con la primera opcion habria que hacerlo cda vez que se va a acceder a la clase. Con la segunda
+    solo habria que hacerlo una vez aen todo el archivo.
+
+
+- La clase pincipal y el metodo main:
+
+    El metodo main solo piede estar en una clase y se recomienda que esa clase sea pública, y debe
+        ser la unica clase pública en el fichero fuente, y el nombre del fichero fuente ha de tener
+        el mismo nombre que la clase "Principal" que es pública.
+
+
+- La clase System:
+
+    System.out.println("Hola, Mundo")
+
+    Contiene una variable estatica de la clase System que a su vez es un objeto sobre e que se
+        invica el metodo println().
+
+
+- Paquete java.lang:
+
+    Un oaquete es más o menos lo mismo que un modulo de python.
+
+    Las clases se guardan en paquetes.
+
+    Los paquetes son espacios de nombre, ya que se pueden tener dos paquetes que contengan dos
+        clases distintas con el mismo nombre y no da error pero NO se pueden tener dos clases
+        distintas con el mismo nombre en el mimo paquete.
+
+    En java no se pueden importar paquetes per se solo se importa su contenido.
+
+    Nombre cualificado de las clases se indican: nombre_de_la_clase.Nombre_del_paqute.
+
+    La clase System pertenece al paquete java.lang, que es un paqute especial ya que
+        proporciona clases que son esenciales para el elnguaje java. Por lo que sus
+        miembros se importan automaticamente y por ello se puede acceder a todas sus clases
+        sin tener que importarlas ni usar el nombre totalmente cualificado.

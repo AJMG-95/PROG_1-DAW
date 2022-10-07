@@ -1,0 +1,54 @@
+Programar en Java una clase Polinomio cuyas instancias representen
+   polinomios de grado n
+
+sobre enteros:
+p(x)=an⋅xn+an−1⋅xn−1+⋯+a0
+
+Donde todos los ai y n son enteros.
+
+Por ejemplo, en el polinomio de segundo grado 3x2+4x−3 tenemos que
+   n=2, a2=3, a1=4 y a0=−3. Observar que n es siempre el exponente
+   más grande que tiene la x en el polinomio.
+
+Indicación: Para representar un polinomio basta con guardar los
+coeficientes ai en un array de números enteros.
+
+Por ejemplo, el polinomio anterior se podría representar como el array {3, 4, -3}.
+
+El constructor de la clase recibirá como argumento un array con los coeficientes
+   del polinomio a crear. Tiene que haber, al menos, un coeficiente.
+
+Por ejemplo,
+   el polinomio p(x)=3x2+4x−3 se puede obtener así:
+      new Polinomio(new int[] {3, 4, -3})
+
+   El polinomio p(x)=4 se obtiene así:
+      new Polinomio(new int[] {4})
+
+   El polinomio p(x)=3x3+2x+5 se obtiene así:
+      new Polinomio(new int[] {3, 0, 2, 5})
+
+Además, al convertir el polinomio en cadena se obtendrá una representación
+   textual del polinomio, de la siguiente forma:
+
+System.out.println(new Polinomio(new int[] {3, 4, -3)));  // Imprime 3x^2+4x+-3
+
+Finalmente, la clase tendrá además un método derivada() (sin parámetros)
+   que devolverá la derivada del polinomio sobre el que se aplica el método.
+
+La derivada del polinomio p(x)=an⋅xn+an−1⋅xn−1+⋯+a0 es otro polinomio p′(x)
+   de grado (n−1) que se calcula así:
+
+      p′(x)=(an⋅n)⋅xn−1+(an−1⋅(n−1))⋅xn−2+⋯+a1
+
+
+Por ejemplo, la derivada del polinomio p(x)=3x2+4x−3 es p′(x)=6x+4.
+
+Por ejemplo:
+Test                                                                       Resultado
+
+System.out.println(new Polinomio(new int[] {3, 4, -3}));                   3x^2+4x-3
+
+System.out.println((new Polinomio(new int[] {3, 4, -3})).derivada());      6x+4
+
+System.out.println((new Polinomio(new int[] {3, 0, 2, 5})).derivada());    9x^2+2

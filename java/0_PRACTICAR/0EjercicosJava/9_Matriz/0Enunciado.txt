@@ -1,0 +1,9 @@
+9. Escribir un programa que represente la matriz:
+
+    1 2 3
+    4 5 6
+    7 8 9
+
+Usando un array bidimensional inicializado a los valores adecuados.
+A continuación, debe mostrar la matriz por la salida recorriendo el
+    array usando dos bucles anidados.

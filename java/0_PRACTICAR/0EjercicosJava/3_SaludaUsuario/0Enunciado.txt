@@ -1,0 +1,5 @@
+3. Escribir un programa que salude al usuario cuyo nombre haya sido indicado como
+primera opción al ejecutar dicho programa desde la línea de órdenes. Por ejemplo, si el
+programa compilado es Saluda.class y se ejecuta como:
+$ java Saluda Ricardo
+deberá responder «¡Hola, Ricardo!».

@@ -1,0 +1,11 @@
+8. Escribir un programa donde el método main pase un array de enteros a
+un método llamado cambiar definido por el programador, el cual modificará
+uno de los elementos del array (pero no devolverá nada, es decir, debe
+definirse de tipo void). Finalmente, se deberá comprobar en el método main
+si el array ha sido modificado tras la llamada a cambiar.
+¿Cambia en algo el resultado si el array se declara como final
+en el método main?
+¿Cambia en algo el resultado si el parámetro del método cambiar
+se declara como final?
+¿Por qué?
+(Pista: recordar el concepto de mutabilidad).

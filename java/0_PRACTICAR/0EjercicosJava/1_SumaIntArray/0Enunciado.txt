@@ -1,0 +1,2 @@
+1. Escribir un programa Java que sume los elementos de un array de 5 elementos (de tipo
+entero) ya inicializado.

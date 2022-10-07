@@ -1,0 +1,129 @@
+Examen práctico T2
+
+    La calificación máxima del examen es de 7 puntos.
+    Los ejercicios no deben tener ningún error de estilo, lo que se comprueba mediante pylint --disable=invalid-name,redefined-outer-name,missing-class-docstring,missing-function-docstring,line-too-long. Hasta que el ejercicio no supere todas las comprobaciones de pylint, no se llevan a cabo las comprobaciones de los tests.
+    Por cada test superado: se suman T
+
+ puntos, siendo T
+ el número de tests del ejercicio.
+Posteriormente, se hará una comprobación manual para realizar las siguientes verificaciones (siendo P
+ la puntuación total del ejercicio):
+
+    Por cada test superado usando un algoritmo ad-hoc: se restan T
+
+puntos.
+Por cada algoritmo incorrecto utilizado: se restan P2
+ puntos.
+Por cada detalle algorítmico innecesariamente complicado o ineficiente: se restan P4
+
+         puntos.
+
+(Un algoritmo ad-hoc es aquel que está diseñado maliciosamente para superar un test, devolviendo directamente la salida esperada por el test ante los valores de entrada adecuados. Por ejemplo, una función que debería calcular la suma de dos números pero que lo único que hace es devolver directamente 7 ante los argumentos 4 y 3 para superar el test suma(4, 3) == 7.)
+
+Criterios de evaluación:
+
+CE1.a CE1.b CE1.c CE2.a CE2.b CE2.c CE2.d CE2.f CE2.g CE2.h CE2.i CE3.f CE3.g CE4.g CE6.a CE6.c CE6.d CE7.a CE7.b CE7.c CE7.d CE7.e CE7.f CE7.g CE7.h
+
+
+------------------------------------------------------------------------------------------------------------------
+Programar en Python un modelo orientado a objetos del funcionamiento de una lámpara. Para ello, se deberán crear, al menos, las clases Lampara y Bombilla.
+
+    Las lámparas pueden tener uno o varios casquillos, en cada uno de los cuales puede ir una bombilla.
+    Cada casquillo tiene un tamaño, que puede ser pequeño o mediano.
+    Cada bombilla tiene una determinada potencia (medida en vatios) y un tamaño.
+    Cada lámpara está diseñada para soportar una potencia máxima en vatios, por lo que la suma de las potencias de todas las bombillas que tenga colocadas no debe superar esa potencia máxima.
+
+El constructor de la clase Bombilla recibe la potencia (medida en vatios, un número real) y el tamaño de la bombilla (que puede ser 'P' para pequeño o 'M' para mediano). Esos valores son inmutables.
+
+La clase Bombilla deberá contar, al menos, con los siguientes métodos:
+
+    potencia(): devuelve la potencia de la bombilla en vatios.
+    tamanyo(): devuelve el tamaño de la bombilla.
+
+El constructor de la clase Lampara recibe el número de casquillos pequeños y el número de casquillos medianos que tiene, así como la potencia máxima que admite. Todos esos valores son inmutables.
+
+La clase Lampara deberá contar, al menos, con los siguientes métodos:
+
+    poner(bombilla): pone una bombilla en la lámpara, en alguno de los casquillos que haya libres y que sea del mismo tamaño que la bombilla. De no haber ningún casquillo adecuado libre, o si al poner la nueva bombilla se supera la potencia máxima permitida en la lámpara, el método no hará nada. Devuelve el objeto lámpara.
+    quitar(tamaño): quita una bombilla cualquiera de la lámpara con el tamaño indicado, y la devuelve. En caso de no haber ninguna de ese tamaño, devolverá None.
+    potencia_total(): devuelve la potencia total consumida por la lámpara en vatios, calculada con la suma de las potencias de cada bombilla puesta en la lámpara.
+
+
+Test 	Resultado
+
+print(Lampara(3, 0, 20).poner(Bombilla(10, 'P')).potencia_total())
+10
+
+print(Lampara(3, 0, 20).poner(Bombilla(10, 'M')).potencia_total())
+0
+
+print(Lampara(3, 2, 20).poner(Bombilla(10, 'P')).poner(Bombilla(10, 'M')).quitar('M').tamanyo())
+'M'
+-------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------
+Programar en Python un modelo orientado a objetos del funcionamiento de una lavadora.
+
+Una lavadora:
+
+    Puede estar encendida o apagada (por defecto está apagada).
+    En cada momento, puede encontrarse en un determinado programa de lavado (que recuerda entre apagados) o puede estar en modo reposo (por defecto está en modo reposo).
+    Tiene una puerta que puede estar abierta o cerrada (por defecto está abierta).
+    Tiene un depósito para el detergente y otro para el suavizante, con una capacidad de 3 litros y 5 litros, respectivamente.
+
+Los programas de lavado se identifican mediante un número del 0 al 4, con el siguiente significado:
+
+    0: modo reposo (representa que no está en ningún programa de lavado).
+    1: prelavado.
+    2: lavado.
+    3: aclarado.
+    4: centrifugado.
+
+La lavadora va pasando por todos los programas de lavado desde el actual hasta el último (si no está ya en modo reposo), y acaba siempre en modo reposo. Por ejemplo, si se empieza desde el programa 1, pasaría por los programas 1 flecha derecha 2 flecha derecha 3 flecha derecha 4 flecha derecha 0. Si empieza por el 2, pasaría por 2 flecha derecha 3 flecha derecha 4 flecha derecha 0.
+
+Los depósitos deben ser instancias de la clase Deposito. El constructor de la clase recibe un número real que representa la capacidad total del depósito (en litros), el cual no puede cambiar durante la vida del objeto.
+
+Además, los depósitos deben responder, al menos, a los siguientes métodos:
+
+    capacidad(): devuelve la capacidad total del depósito en litros.
+    restante(): devuelve la cantidad de líquido que queda en el depósito, en litros.
+    llenar(litros): echa en el depósito la cantidad de litros indicada (un número real). Si la cantidad total supera la capacidad del depósito, se echará justo hasta llenar completamente el depósito. Devuelve el objeto depósito.
+    quitar(litros): retira del depósito la cantidad de litros indicada (un número real). Si se intenta quitar más litros de los que hay actualmente en el depósito, simplemente se vaciará completamente el depósito. Devuelve el objeto depósito.
+    vaciar(): vacía el depósito. Devuelve el objeto depósito.
+
+La lavadora debe ser instancia de la clase Lavadora. La lavadora debe responder, al menos, a los siguientes métodos:
+
+    detergente(): devuelve el depósito de detergente.
+    suavizante(): devuelve el depósito de suavizante.
+    encender() / apagar(): enciende / apaga la lavadora. Sólo se puede encender si está cerrada y si tiene, al menos, 0.8 litros de detergente y 0.5 litros de suavizante. Devuelve el objeto lavadora.
+    encendida(): Devuelve True si la lavadora está encendida o False si está apagada.
+    abrir(): abre la lavadora si es posible. La lavadora no se puede abrir si tiene activado algún programa de lavado. En tal caso (o si la lavadora ya estaba abierta) no hace nada. Devuelve el objeto lavadora.
+    cerrar(): cierra la lavadora si no estaba ya cerrada. Devuelve el objeto lavadora.
+    programa(): devuelve el programa de lavado actual de la lavadora.
+    programar(programa): pone la lavadora en el programa indicado. Sólo funciona si la lavadora está apagada (si está encendida, no hace nada). Devuelve el objeto lavadora.
+    continuar_programa(): pasa al siguiente programa de lavado, si no estaba ya en modo reposo y si la lavadora está encendida. Si el siguiente programa de lavado es el modo reposo, apaga automáticamente la lavadora. Cada programa de lavado consume 0.4 litros de detergente y 0.2 litros de suavizante. Devuelve el objeto lavadora.
+
+Importante
+
+Al principio de cada test, se hace:
+
+lavadora = Lavadora()
+lavadora.detergente().llenar(2)
+lavadora.suavizante().llenar(1)
+
+
+Test 	Resultado
+
+print(lavadora.cerrar().programar(3).encender().continuar_programa().programa())
+4
+
+print(lavadora.cerrar().programar(3).encender().continuar_programa().detergente().restante())
+1.6
+
+print(lavadora.programar(3).encender().continuar_programa().programa())
+3
+
+print(lavadora.cerrar().programar(3).continuar_programa().programa())
+3
+-------------------------------------------------------------------------------------------------------------------

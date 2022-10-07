@@ -1,0 +1,58 @@
+Programar en Java un modelo orientado a objetos de un sistema gestión de
+    inventarios para el departamento de Informática, con base en la siguiente
+    especificación textual:
+
+Un elemento inventariable pueden ser un ordenador o un componente.
+    Un ordenador se puede encontrar en un aula o en un armario.
+    Un componente puede estar en un armario o formando parte de un ordenador.
+    Un armario siempre se encuentra en un aula.
+
+El constructor del método inventariable debe recibir como argumento
+    la ubicación inicial del mismo.
+
+Queremos saber en todo momento dónde se encuentra cada elemento inventariable.
+    Para ello, todo elemento inventariable deberá disponer del
+    método ubicacion(), que nos devolverá la ubicación actual del elemento
+    inventariable.
+
+Asimismo, los elementos inventariables se podrán cambiar de ubicación
+    usando el método mover(nuevaUbicacion), el cual además debe devolver
+    el propio elemento inventariable.
+
+Además, queremos llevar un histórico de todos los movimientos que sufra un
+    elemento inventariable. Con el método historico() se obtendrá una
+    lista (ordenada cronológicamente de más antiguo a más reciente) de
+    todas las ubicaciones en las que haya estado dicho elemento inventariable.
+
+Igualmente, se podrá dar de baja un elemento inventariable con el
+    método baja(). Al hacerlo, pasará a no tener ubicación, lo que se
+    representa con la ubicación null. Un elemento dado de baja no se
+    puede mover ni reubicar. Si se trata de un ordenador y éste tiene
+    componentes dentro, éstos también pasarán a estar de baja automáticamente.
+
+
+Importante
+Al principio de cada test, se hace:
+    p6 = new Aula("P6");
+    p7 = new Aula("P7");
+    armario = new Armario(p6);
+    comelta = new Ordenador(p6);
+    grafica = new Componente("Tarjeta gráfica", armario);
+    hdd = new Componente("Disco duro HDD", comelta);
+    ram = new Componente("8 GB de RAM", comelta);
+
+Por ejemplo:
+Test 	Resultado
+
+System.out.println(comelta.mover(p7).ubicacion() == p7);
+    true
+
+System.out.println(comelta.mover(p7).historico().equals(List.of(p6, p7)));
+    true
+
+System.out.println(hdd.ubicacion() == comelta);
+    true
+
+comelta.baja();
+System.out.println(hdd.ubicacion() == null);
+    true

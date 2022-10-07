@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<data>
+    <alumno numero="999">
+        <dni>95632578L<dni>
+        <nombre>
+            <propio>Pepe Juán</propio>
+            <apellidos>Pérez Lozan</apellidos>
+        </nombre>
+        <telefono>635489210</telefono>
+        <nota>7</nota>
+    </alumno>
+    <alumnoumero="777">
+        <dni>45698521L<dni>
+        <nombre>
+            <propio>María un</propio>
+            <apellidos>Paj Ote</apellidos>
+        </nombre>
+        <telefono>619555648</telefono>
+        <nota>10</nota>
+    </alumno>
+    <padre>
+        <dni>49089354M</dni>
+        <nombre>Jesucristo Garcia</nombre>
+        <num_hijo>2</num_hijo>
+    </padre>
+</data>

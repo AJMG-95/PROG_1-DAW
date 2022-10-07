@@ -1,0 +1,5 @@
+11. Crear un programa que cree un array de cinco elementos, donde el primero
+sea un entero, el segundo una cadena, el tercero un booleano, el cuarto un
+valor null y el quinto un StringBuilder. Luego debe enviar ese array a un método
+estático que recorrerá el array desde el primer elemento hasta el último y los
+mostrará por la salida

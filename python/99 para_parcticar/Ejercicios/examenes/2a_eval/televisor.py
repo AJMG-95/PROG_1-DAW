@@ -1,0 +1,104 @@
+'''
+Programar en Python un modelo orientado a objetos del funcionamiento de un televisor.
+
+Un televisor:
+    Puede estar encendido o apagado.
+    Está siempre sintonizado en un canal concreto, que recuerda entre apagados. 
+    Ese canal debe estar comprendido entre 1 y 100. Por defecto a 1.
+    Tiene un nivel de volumen comprendido entre 0 y 30. Por defecto a 0.
+    Tiene un puerto USB que le permite reproducir contenido multimedia almacenado en un pendrive 
+    o disco duro externo. Para ello, debemos crear una clase llamada Soporte cuyas instancias 
+    representen soportes de almacenamiento externo. El constructor de la clase recibe una lista 
+    con el contenido multimedia, que son cadenas que contienen cada una el nombre de un archivo multimedia.
+
+Los soportes deben responder, entre otros, a los métodos:
+    playlist(): devuelve una tupla con todos su contenido multimedia. Cada elemento de esa tupla 
+		será una cadena que contiene el nombre del archivo correspondiente.
+    reproducir(indice): simula la reproducción del archivo almacenado en la posición indicada por indice, 
+		devolviendo el nombre del archivo. Lanza una excepción IndexError si el archivo correspondiente no existe.
+
+El televisor debe responder, entre otros, a los métodos:
+	encender() / apagar(): enciende/apaga el televisor; devuelve el propio objeto televisor.
+    subir_volumen() / bajar_volumen(): sube/baja el volumen de uno en uno si el televisor está encendido 
+    	(si está apagado, no hace nada), siempre dentro de los límites permitidos; devuelve el propio objeto televisor.
+    volumen(): devuelve el nivel de volumen del televisor.
+    sintonizar(canal): sintoniza el canal cuyo número es canal, siempre dentro de los límites permitidos, 
+    	si el televisor está encendido; devuelve el propio objeto televisor.
+    canal(): devuelve el canal actualmente sintonizado.
+    conectar(soporte): conecta el soporte al puerto USB; devuelve el propio objeto televisor.
+    desconectar_si_conectado(): desconecta el soporte que tuviera conectado en el puerto USB (si no hubiera ninguno, 
+    	no hace nada); devuelve el propio objeto televisor.
+    reproducir_si_conectado(): reproduce, de uno en uno, todo el contenido multimedia que hay en el soporte que 
+    	tiene conectado a su puerto USB (si no hubiera ninguno o el televisor estuviese apagado, no hace nada); 
+    	devuelve un conjunto mutable con los nombres de los archivos que ha reproducido (si no ha reproducido ninguno, 
+    	devuelve un conjunto vacío).
+
+
+Importante:
+Al principio de cada test, se hace:
+	soporte = Soporte(["Batman.mp4", "Superman.mp4"])
+
+
+Test 																											Resultado
+
+print(Televisor().encender().bajar_volumen().volumen())																0
+
+print(Televisor().subir_volumen().encender().subir_volumen().volumen())												1
+
+print(Televisor().conectar(soporte).reproducir_si_conectado())														set()
+
+print(Televisor().conectar(soporte).encender().reproducir_si_conectado() == {'Batman.mp4', 'Superman.mp4'})			True
+'''
+
+class soporte():
+    def __init__(self, archivos) -> None:
+        self.__archivos = archivos
+
+    def playlist(self):
+        """devuelve todos su contenido multimedia
+
+        Returns:
+            tuple: nombre de los archivos multimedia
+        """
+        return tuple(self.__archivos)
+
+    def reproducir(self, indice):
+        """Simula la reproduccion de un archivo multimedia
+
+        Args:
+            indice (int): indice dentro de la lista de archivos multimedia
+
+        Returns:
+            srt: Nombre del archivo multimedia que se está reproduciendo
+        """
+        if indice > len(self.__archivos):
+            raise IndexError("El archivo correspondiente no existe")
+        return self.__archivos[indice]
+
+
+class televisor:
+    def __init__(self) -> None:
+        self.__encendido = False
+        self.__canal = 1
+        self.__volumen = 0
+        self.__soporte = None
+
+    def encender(self):
+        self.__encendido = True
+
+    def apagar(self):
+        self.__encendido = False
+
+    def volume(self):
+        self.__volumen
+
+    def canal(self):
+        return self.__canal
+
+    def conectar(self, soporte):
+        self.__soporte = soporte
+
+    def sintonizar(self, canal):
+        if canal in range(0, 101):
+            self.__canal = canal
+        return self

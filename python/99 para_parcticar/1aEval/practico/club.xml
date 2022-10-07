@@ -1,0 +1,10 @@
+<club>
+    <nombre>Di&#243;genes</nombre>
+    <socios>
+        <socio id="1">
+            <nombre>Sherlock Holmes</nombre>
+            <direccion>Avda. de Huelva, s/n</direccion>
+            <alta>1890-12-14</alta>
+        </socio>
+        </socios>
+</club>

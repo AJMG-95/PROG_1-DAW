@@ -1,0 +1,5 @@
+coche
+moto
+camion
+pie
+dedo

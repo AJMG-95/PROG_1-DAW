@@ -1,0 +1,360 @@
+1. Al evaluar la expresión 2 < 1 or 2 != 1, el resultado es:
+a. 1.
+b. 2.
+c. True.
+d. False.
+
+
+2. ¿Qué instrucción es equivalente a i += 1?
+a. i = i + 1.
+b. i + 1.
+c. 1 += i.
+d. i = i + i.
+
+
+3. ¿Qué valor devuelve la siguiente expresión: 3 if 1 < 2 else 4?
+a. 1.
+b. 2.
+c. 3.
+d. 4.
+
+
+4. Selecciona la expresión cuya evaluación resulta 3:
+a. 3 + 2 * 6 / 5.
+b. (3 + 2) * 6 / 5.
+c. (3 + 2 * 6) / 5.
+d. 3 + 2 * (6 / 5).
+
+
+5. Los operadores lógicos operan con valores booleanos, resultando:
+a. Valores enteros.
+b. Valores enteros y booleanos.
+c. Otros tipos de valores.
+d. Sólo valores booleanos.
+
+
+6. La evaluación de una operación relacional puede generar un valor de tipo:
+a. Entero.
+b. Real.
+c. Booleano.
+d. Todos los anteriores.
+
+
+7. La expresión 3 == 3 and 2 < 3 and 1 != 2 devuelve:
+a. True.
+b. False.
+c. No se puede evaluar.
+d. No genera un booleano, ya que la expresión es aritmética.
+
+
+8. La siguiente expresión, donde interviene la variable booleana a:
+3 != 3 or a or 1 < 2
+resulta:
+a. Dependerá del valor de a.
+b. True.
+c. False.
+d. No se puede evaluar.
+
+
+9. Elige los valores de las variables enteras (a, b y c) que permiten que la evaluación de la
+siguiente expresión sea cierta: a < b and b != c and b <= c:
+a. a = 1, b = 1, c = 2.
+b. a = 2, b = 1, c = 2.
+c. a = 1, b = 2, c = 2.
+d. a = 1, b = 2, c = 3.
+10. El bloque de instrucciones de una sentencia if se ejecutará:
+a. Siempre.
+b. Nunca.
+c. Dependerá de la evaluación de la expresión utilizada.
+d. Todas las respuestas anteriores son correctas.
+
+
+11. En una sentencia if-else, los bloques de instrucciones (bloque True y bloque False)
+pueden ejecutarse:
+a. Simultáneamente.
+b. Es posible, dependiendo de la condición utilizada, que no se ejecute ninguno.
+c. Siempre se ejecutará al menos uno y son excluyentes.
+d. Todas las anteriores son incorrectas.
+
+
+12. La instrucción que permite detener completamente las iteraciones de un bucle, es:
+a. stop.
+b. break.
+c. continue.
+d. finish.
+
+
+13. La instrucción que permite detener la iteración actual de un bucle, continuando con la
+siguiente (si procede) es:
+a. stop.
+b. break.
+c. continue.
+d. finish.
+
+
+14. ¿Cuántas veces se ejecutará la instrucción del bucle más interno en el siguiente frag-
+mento de código?
+for i in range(1, 11):
+for i in range(1, 6):
+print("Hola")
+a. 10 veces.
+b. 5 veces.
+c. 50 veces.
+d. Infinitas veces.
+
+
+15. Analiza el siguiente código y busca qué valores de a y b implican un menor número de
+iteraciones:
+for i in range(a, a + b + 1):
+for j in range(a + b, -1, -1):
+...
+a. a = 1 y b = 3.
+b. a = 3 y b = 1.
+c. a = 1 y b = 1.
+d. a = 3 y b = 3.
+16. Una variable que se crea dentro de un ámbito sólo se podrá utilizar:
+a. En cualquier parte del programa.
+b. En todos los bucles.
+c. Dentro del ámbito donde se ha creado.
+d. Todas las opciones anteriores son correctas.
+
+
+17. Una variable que se crea dentro de una función sólo se podrá utilizar:
+a. En cualquier lugar del código.
+b. Fuera de cualquier función.
+c. Sólo en la función donde se ha creado.
+d. Ninguna de las opciones anteriores es correcta.
+
+
+18. ¿Qué instrucción permite a una función imperativa devolver un valor?
+a. value.
+b. return.
+c. def.
+d. =.
+
+
+19. El tipo devuelto por todas las funciones definidas en nuestro programa tiene que ser
+siempre:
+a. int.
+b. float.
+c. bool.
+d. Ninguna de las opciones anteriores es correcta.
+
+
+20. El paso de argumentos a una función en Python siempre es:
+a. Por valor.
+b. Por copia.
+c. Por asignación.
+d. Por referencia.
+
+
+21. ¿Cuáles de las siguientes operaciones se pueden implementar fácilmente mediante
+funciones recursivas?
+a. 𝑎𝑛 = 𝑎 · 𝑎𝑛−1.
+b. 𝑒𝑠_𝑝𝑎𝑟 (𝑛) = 𝑒𝑠_𝑖𝑚𝑝𝑎𝑟 (𝑛 − 1) y 𝑒𝑠_𝑖𝑚𝑝𝑎𝑟 (𝑛) = 𝑒𝑠_𝑝𝑎𝑟 (𝑛 − 1).
+c. 𝑠𝑢𝑚𝑎(𝑎, 𝑏) = 𝑠𝑢𝑚𝑎(𝑎 + 1, 𝑏 − 1).
+d. Todas las anteriores respuestas son correctas.
+
+
+22. En los identificadores de las funciones en Python, al igual que en los de las variables, el
+convenio a usar es:
+a. Snake case: suma_notas_alumnos.
+b. Todo junto en minúsculas: sumanotasalumnos.
+c. Pascal case: SumaNotasAlumnos.
+d. Camel case: sumaNotaAlumnos.
+
+22. En los identificadores de las funciones en Python, al igual que en los de las variables, el
+convenio a usar es:
+a. Snake case: suma_notas_alumnos.
+b. Todo junto en minúsculas: sumanotasalumnos.
+c. Pascal case: SumaNotasAlumnos.
+d. Camel case: sumaNotaAlumnos.
+Solución: a.
+23. En Python, una lista puede almacenar datos de distintos tipos, como por ejemplo enteros,
+booleanos, reales, etc.
+a. Cierto, las listas siempre pueden almacenar datos de distintos tipos.
+b. Falso, las listas sólo pueden almacenar datos de un único tipo.
+c. Pueden almacenar datos de distintos tipos siempre que sean numéricos.
+d. Pueden almacenar datos de distintos tipos siempre que la longitud de los datos
+sea idéntica.
+Solución: a.
+24. En Python, la numeración de los índices que determina la identificación de cada elemento
+de una lista comienza en:
+a. Cero.
+b. Uno.
+c. Depende del tipo de dato de la lista.
+d. Es configurable por el usuario.
+Solución: a.
+25. Si en una lista de 10 elementos intentamos acceder al elemento con índice 11 (que se
+encuentra fuera de rango):
+a. Al salirse del rango de la longitud, Python redimensiona la lista de forma automá-
+tica.
+b. No es posible y lanza una excepción.
+c. Los índices tienen un comportamiento circular y utilizar el índice 11 es equivalente
+a utilizar el índice 1.
+d. Ninguna de las anteriores respuestas es correcta.
+Solución: b.
+26. La forma de conocer la longitud de una lista l es mediante:
+a. l.size.
+b. len(l).
+c. l.len.
+d. List.size(l).
+Solución: b.
+27. En Python, al igual que en otros muchos lenguajes de programación, las secuencias de
+escape se escriben mediante:
+a. Dos puntos (:).
+b. El carácter u mayúscula (U).
+c. El carácter u minúscula (u).
+d. Una barra invertida (\).
+Solución: d.
+28. Señala qué opción es cierta en Python:
+a. 'a' es una cadena de caracteres.
+b. "a" es una cadena de caracteres.
+c. """a""" es una cadena de caracteres.
+d. Todas las opciones anteriores son ciertas.
+Solución: d.
+29. La forma de extraer en Python el cuarto carácter de la cadena almacenada en la variable
+cad es:
+a. cad.index(4).
+b. cad.get(4).
+c. cad[3].
+d. cad.char(3).
+Solución: c.
+30. El método que permite eliminar los caracteres blancos del principio y el final de una
+cadena es:
+31. ¿Qué método permite convertir una lista de cadenas (por ejemplo, ['ab', 'cd', 'ef'])
+en una cadena formada por la concatenación de los elementos de la cadena (en este
+caso, 'abcdef')?
+a. join.
+b. concat.
+c. str.
+d. split.
+Solución:
+32. ¿Cuál de los siguientes modos de apertura de archivos se debe usar para abrir un archivo
+de texto en sólo lectura?
+a. r+.
+b. wb.
+c. a.
+d. r.
+Solución: d.
+33. ¿Cuál de las siguientes preguntas es correcta?
+a. Escribir en un archivo supone siempre hacer crecer el tamaño del archivo.
+b. Añadir a un archivo supone siempre hacer crecer el tamaño del archivo.
+c. Para leer de un archivo primero tiene que estar cerrado.
+d. Siempre que se escribe en un archivo, si no existe, lo crea.
+Solución: b.
+34. ¿Cuál es la primera acción que se debe realizar sobre un archivo?
+a. Guardarlo.
+b. Cerrarlo.
+c. Abrirlo.
+d. Escribirlo.
+Solución: c.
+35. ¿Cuál es la última acción que se debe realizar sobre un archivo?
+a. Guardarlo.
+b. Cerrarlo.
+c. Abrirlo.
+d. Escribirlo.
+Solución: b.
+36. ¿Cuál es el tipo de los datos leídos desde un archivo de texto?
+a. Booleanos.
+b. Enteros.
+c. Cadenas.
+d. Reales.
+Solución: c.
+37. ¿Cuáles de las siguientes afirmaciones son correctas respecto a los modos de apertura
+de un archivo? (Se pueden señalar varias)
+a. Cuando se abre un archivo sólo para lectura, si el archivo no existe, se produce un
+error.
+b. Cuando se abre un archivo sólo para escritura, si el archivo no existe, se produce
+un error.
+c. Cuando se abre un archivo sólo para lectura, si el archivo no existe, el programa
+abrirá un archivo vacío.
+d. Cuando se abre un archivo sólo para escritura, si el archivo no existe, se creará un
+archivo nuevo.
+e. Cuando se abre un archivo sólo para escritura, si el archivo existe, se sobreescribirá
+con un archivo nuevo.
+Solución: a, d, e.
+38. ¿Cuál de las siguientes instrucciones permiten obtener el contenido completo de un
+archivo en forma de cadena?
+a. f.read(n)
+b. f.read()
+c. f.readline()
+d. f.readlines()
+Solución: b.
+39. Una excepción en Python:
+a. Se produce cuando se rompe el monitor del ordenador.
+b. Es un valor único de una variable.
+c. Se lanza cuando se produce una condición anómala durante la ejecución de un
+programa.
+d. Tiene lugar cuando un código es sintácticamente incorrecto.
+Solución: c.
+40. La palabra reservada finally:
+a. Termina la ejecución de un programa.
+b. Termina la ejecución de una función, forzando el return.
+c. En una estructura try ... except, fuerza la ejecución de su bloque antes de que
+se ejecute una sentencia return e independientemente de si se produce o no una
+excepción.
+d. Indica el final de una función.
+Solución: c.
+41. Nos tenemos que asegurar de que todos los flujos abiertos deben cerrarse antes de que
+termine el programa. . .
+a. Porque se quedarían abiertos hasta que se apague el ordenador.
+b. Porque otro programa podría alterarlos.
+c. Porque se deben liberar los recursos asociados, como los archivos. Además, podrían
+quedar caracteres del búfer sin escribir.
+d. Porque se pueden borrar datos de una archivo.
+Solución: c.
+42. Los flujos se cierran:
+a. Con el método close.
+b. Apagando el ordenador.
+c. Abortando el programa.
+d. Con el atributo closed.
+Solución: a.
+43. Los gestores de contexto:
+a. Permiten abrir flujos asociados con varios archivos a la vez.
+b. Es abrir archivos recurrendo a una lista.
+c. Consiste en abrir flujos sin peligro de que se produzcan excepciones.
+d. Permiten gestionar automáticamente lo que ocurre al entrar o salir de un bloque
+de código, y se pueden usar junto con la orden with para asegurar el cierre de un
+archivo previamente abierto al ejecutar el with.
+Solución: d.
+44. ¿De qué forma podemos importar el módulo ElementTree para manipular documentos
+XML?
+a. import xml.etree.ElementTree as ET
+b. import xml.etree.ElementTree
+c. Ambas respuestas son correctas.
+d. Ninguna respuesta es correcta.
+Solución: c.
+45. Dado el siguiente documento XML:
+<?xml version="1.0"?>
+<club>
+<nombre>Diógenes</nombre>
+<socios>
+<socio id="1">
+<nombre>Sherlock Holmes</nombre>
+<direccion>221B Baker St</direccion>
+<alta>1890-12-14</alta>
+</socio>
+<socio id="51">
+<nombre>Winston Churchill</nombre>
+<direccion>10 Downing St</direccion>
+<alta>1942-02-13</alta>
+</socio>
+</socios>
+</club>
+y suponiendo que la variable raiz (de tipo Element) contiene el nodo raíz del árbol
+correspondiente a dicho documento, ¿qué expresión nos devuelve una lista con los
+nodos <nombre> de todos los socios del club?
+a. raiz.findall('.//nombre').
+b. raiz.findall('socios/*/nombre').
+c. raiz.iter('nombre').
+d. raiz.find('nombre').
+Solución: b.
+46. Siendo socio un nodo <socio> del documento XML del ejercicio anterior (es decir, una
+variable de tipo Element), ¿qué expresión nos devuelve el nombre del socio en forma
+de cadena?
+a. socio.find('nombre').text
+b. socio.findall('nombre').text
+c. socio.find('nombre')
+d. socio.nombre
+Solución: a

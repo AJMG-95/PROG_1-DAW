@@ -1,0 +1,49 @@
+Ejercicio 2 Examen 21-22
+
+Programar en Java un modelo orientado a objetos del funcionamiento del
+    carrito de la compra de una tienda online.
+Cada usuario de la tienda online tiene su propio carrito (lo crea el
+    propio usuario cuando se crea éste).
+
+El usuario puede:
+◦ Añadir productos al carrito mientras consulta el catálogo de la tienda: cada vez
+    que añade un producto al carrito, se incrementa en 1 la cantidad de ese producto
+    en el carrito (si el producto no estaba inicialmente en el carrito, se empieza
+    con una cantidad de 1).
+◦ Reducir en 1 las unidades de un producto que ya esté en el carrito: si sólo había
+    una unidad de ese producto en el carrito, se retira el producto del carrito.
+◦ Vaciar el carrito.
+    Por tanto, cada usuario lleva asociado un carrito donde se irán almacenando los
+    productos añadidos y la cantidad de cada uno de ellos. Para ello, las parejas
+    «producto – cantidad» que forman las entradas del carrito se pueden guardar en
+    un Map (implementado con un HashMap, por ejemplo).
+◦ El carrito debe disponer de un método getEntradas que devuelva el mapa anterior.
+
+Los productos tienen un código, una denominación y un precio. Además, pertenecen a una
+    categoría.
+Los usuarios pueden consultar todos los productos que pertenecen a una categoría en
+    concreto (para ello, las categorías disponen del método getProductos, que devuelve
+    una lista de tipo List<Producto> con todos los productos de esa categoría).
+
+Partiendo de:
+    Usuario usuario = new Usuario();
+    Carrito carrito = usuario.getCarrito();
+    Categoria tornilleria = new Categoria("Tornillería");
+    Categoria ferreteria = new Categoria("Ferretería");
+    Producto tuerca = new Producto(25, "Tuerca", 12.50, tornilleria);
+    Producto grifo = new Producto(58, "Grifo", 6.30, ferreteria);
+    carrito.anyadirProducto(tuerca);
+    carrito.anyadirProducto(tuerca);
+    Map<Producto,Integer> entradas = carrito.getEntradas();
+
+Tests:
+    entradas.get(tuerca) == 2
+    entradas.get(grifo) == null
+    ferreteria.getProductos().contains(tuerca) == false
+    ferreteria.getProductos().contains(grifo) == true
+
+Nota:
+1 Un algoritmo ad-hoc es aquel que está diseñado maliciosamente para superar un test, devolviendo directa-
+mente la salida esperada por el test ante los valores de entrada adecuados. Por ejemplo, una función que debería
+calcular la suma de dos números pero que lo único que hace es devolver directamente 7 ante los argumentos 4 y
+3 para superar el test suma(4, 3) == 7.
